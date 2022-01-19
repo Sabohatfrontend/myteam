@@ -1,3 +1,39 @@
+:root{
+  --white-color: #fff;
+  --brand-color: #F67E7E;
+  --bg-color: #014E56;
+  --bg-color-dark: #012F34;
+}
+
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/Livvic-Medium.woff2") format("woff2"),
+      url("../fonts/Livvic-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/Livvic-SemiBold.woff2") format("woff2"),
+      url("../fonts/Livvic-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/Livvic-Bold.woff2") format("woff2"),
+      url("../fonts/Livvic-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 /* GLOBAL */
 html{
   height: 100%;
@@ -6,7 +42,7 @@ html{
 }
 
 *,
-*::before
+*::before,
 *::after{
 box-sizing: inherit;
 }
@@ -17,11 +53,12 @@ body{
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial",sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: #fff;
-  color: black;
+  font-family: "Livvic", "Arial",sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 28px;
+  background-color: var(--bg-color-dark);
+  color: var(--white-color);
 }
 
 img{
@@ -31,13 +68,87 @@ img{
 
 .container{
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1150px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .main-content{
   flex-grow: 1;
+  padding-top: 50px;
+}
+
+.site-header {
+  padding-top: 73px;
+  padding-bottom: 79px;
+}
+
+.site-header-container{
+  display: flex;
+  align-items: center;
+}
+
+.site-logo-link {
+  display: block;
+  margin-right: 80px;
+  color: var(--white-color);
+}
+
+.site-logo-img{
+  display: block;
+  width: 160px;
+  height: 40px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.site-nav-link,
+.button {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--white-color);
+  text-transform: lowercase;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.site-nav-link:not(:last-child){
+  margin-right: 40px;
+}
+
+.site-logo-link:hover,
+.site-nav-link:hover{
+  color: var(--brand-color);
+}
+
+.site-logo-link:active,
+.site-nav-link:active{
+  opacity: 0.6;
+}
+
+.button {
+  padding: 9px 33px 11px 32px;
+  background-color: transparent;
+  border: 2px solid var(--white-color);
+  border-radius: 24px;
+}
+
+.button:hover{
+  background-color: var(--white-color);
+  color: var(--bg-color-dark);
+}
+
+.button:active{
+  background-color: transparent;
+  color: var(--white-color);
+  opacity: 0.6;
 }
