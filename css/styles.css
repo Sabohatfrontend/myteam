@@ -159,6 +159,17 @@ img{
   opacity: 0.6;
 }
 
+.button-primary:hover{
+  background-color: var(--bg-color-dark);
+  color: var(--white-color);
+}
+
+.button-primary:active{
+  background-color: var(--brand-color);
+  color: var(--button-text);
+  opacity: 0.6;
+}
+
 .site-nav-link:not(:last-child){
   margin-right: 40px;
 }
