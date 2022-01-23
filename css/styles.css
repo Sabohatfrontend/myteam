@@ -435,6 +435,7 @@ margin-top: 0;
 margin-bottom: 51px;
 list-style: none;
 display: flex;
+align-items: center;
 }
 
 .site-footer-item:not(:last-child){
@@ -443,14 +444,24 @@ margin-right: 16px;
 
 .site-footer-social-link {
   display: block;
+  color: var(--white-color);
+}
+
+.site-footer-item:hover .site-footer-social-link{
+  color: var(--brand-color);
+}
+
+.site-footer-item:active .site-footer-social-link{
+  opacity: 0.6;
 }
 
 .site-footer-social-img {
   display: block;
   width: 24px;
   height: 24px;
-  object-fit: contain;
+  object-fit: cover;
 }
+
 .site-footer-social-bottom {
   margin-right: 0;
 }
