@@ -84,7 +84,8 @@ img{
 
 /* DIVIDER */
 .site-hero-text::before,
-.cta-container::before{
+.cta-container::before,
+.about-hero-text::before{
   content: "";
   display: block;
   width: 50px;
@@ -96,6 +97,11 @@ img{
 .cta-container::before{
   background-color: var(--brand-color);
   margin-bottom: 54px;
+}
+
+.about-hero-text::before {
+  background-color: var(--brand-color);
+  margin-bottom: 40px;
 }
 
 /* SITE-HEADER */
@@ -196,7 +202,8 @@ img{
                        left calc(50% + 350px) bottom -100px;
 }
 
-.site-hero-container {
+.site-hero-container,
+.about-hero-container {
   display: flex;
   align-items: center;
 }
@@ -221,7 +228,28 @@ img{
   max-width: 360px;
 }
 
-/* reviews */
+.about-hero{
+  padding-top: 50px;
+  padding-bottom: 120px;
+  background-color: var(--bg-color);
+  background-image: url("../img/about-hero-circle.svg");
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 765px) bottom;
+}
+
+.about-hero-header{
+  max-width: 350px;
+}
+
+.about-hero-text {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  max-width: 600px;
+}
+
+
+/* CTA */
 .cta {
   padding-top: 140px;
   padding-bottom: 140px;
@@ -297,7 +325,7 @@ background-repeat:no-repeat;
   line-height: 25px;
   opacity: 0.8;
 }
-
+/* REVIEWS */
 .reviews {
   padding-top: 140px;
   padding-bottom: 151px;
@@ -381,7 +409,7 @@ margin-bottom: 32px;
   border-radius: 50%;
   border: 2px solid #C4FFFE;
 }
-
+/* FEATURES */
 .features {
   padding-top: 76px;
   padding-bottom: 76px;
@@ -407,6 +435,8 @@ font-size: 48px;
 line-height: 48px;
   margin-right: auto;
 }
+
+/* SITE-FOOTER */
 
 .site-footer {
   padding-top: 48px;
