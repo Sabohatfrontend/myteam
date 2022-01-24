@@ -523,10 +523,10 @@ img{
   padding-bottom: 168px;
   background-color: var(--bg-reviews);
   background-image: url("../img/directors-circle.svg"),
-                    url("../img/directors-rect.svg");
+  url("../img/directors-rect.svg");
   background-repeat: no-repeat;
   background-position: left calc(50% - 750px) top,
-                       left calc(50% + 700px) bottom;
+  left calc(50% + 700px) bottom;
 }
 
 
@@ -563,16 +563,16 @@ img{
 
 .directors-name {
   font-weight: bold;
-font-size: 18px;
-line-height: 28px;
-color: var(--rapture-blue);
-margin-bottom: 0;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--rapture-blue);
+  margin-bottom: 0;
 }
 
 .directors-special {
   font-weight: 500;
-font-size: 15px;
-line-height: 25px;
+  font-size: 15px;
+  line-height: 25px;
 
 }
 
@@ -596,23 +596,39 @@ line-height: 25px;
   opacity: 0.6;
 }
 
-.button-add::before,
-.button-add::after{
+.button-add-span::before,
+.button-add-span::after{
   display: block;
   content: "";
   background-color: var(--bg-color-dark);
 }
 
-.button-add::before{
+.button-add-span::before{
   width: 4px;
   height: 16px;
-  transform: translateX(20px);
+  transform: translate(20px, 2px);
 }
 
-.button-add::after{
-  transform: translate(14px, -10px) ;
-width: 16px;
-height: 4px;
+.button-add-span::after{
+  transform: translate(14px, -8px) ;
+  width: 16px;
+  height: 4px;
+}
+
+.button-add-active span::after{
+  transform: translate(14px, -8px) rotate(45deg);
+}
+
+.button-add-active span::before{
+  transform: translate(19px, 2px) rotate(45deg);
+}
+
+.button-add-active{
+  background-color: var(--rapture-blue);
+}
+
+.button-add-active:hover{
+  background-color: var(--brand-color);
 }
 
 .clients {
@@ -625,8 +641,8 @@ height: 4px;
   margin-top: 0;
   margin-bottom: 64px;
   font-weight: 700;
-font-size: 48px;
-line-height: 48px;
+  font-size: 48px;
+  line-height: 48px;
 }
 
 .clients-lists {
@@ -649,9 +665,13 @@ line-height: 48px;
   padding-top: 81px;
   padding-bottom: 128px;
   background-color: var(--bg-color);
+  background-image: url("../img/directors-circle.svg");
+  background-repeat: no-repeat;
+  background-position: left -65px top 80px;
 }
 
 .contact-container {
+  position: relative;
   display: flex;
   align-items: flex-start;
 }
@@ -665,17 +685,17 @@ line-height: 48px;
   margin-top: 0;
   margin-bottom: 16px;
   font-weight: 700;
-font-size: 64px;
-line-height: 100px;
+  font-size: 64px;
+  line-height: 100px;
 }
 
 .contact-heading {
   margin-top: 0;
   margin-bottom: 32px;
   font-weight: bold;
-font-size: 32px;
-line-height: 48px;
-color: var(--brand-color);
+  font-size: 32px;
+  line-height: 48px;
+  color: var(--brand-color);
 }
 
 .contact-lists {
@@ -716,7 +736,7 @@ color: var(--brand-color);
 .contact-text {
   margin: 0;
   font-weight: bold;
-font-size: 18px;
+  font-size: 18px;
 }
 
 .contact-form-fields{
@@ -730,13 +750,13 @@ font-size: 18px;
   display: block;
   color: var(--white-color);
   padding: 16px 14px;
-line-height: 25px;
-letter-spacing: -0.115385px;
-background-color: transparent;
-border: none;
-border-bottom: 1px solid var(--white-color);
-text-transform: capitalize;
-cursor: pointer;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--white-color);
+  text-transform: capitalize;
+  cursor: pointer;
 }
 
 .contact-form-fields::placeholder{
@@ -749,11 +769,11 @@ cursor: pointer;
 }
 
 .contact-email:not(:placeholder-shown){
-border-color: var(--brand-color);
+  border-color: var(--brand-color);
 }
 
 .contact-email:valid{
-border-color: var(--rapture-blue);
+  border-color: var(--rapture-blue);
 }
 
 .contact-textarea {
@@ -764,4 +784,11 @@ border-color: var(--rapture-blue);
 .contact-form-fields:focus{
   outline: none;
   border-color: var(--rapture-blue);
+}
+
+.contact-bg-img{
+  position: absolute;
+  transform: rotateY(180deg);
+  bottom: -128px;
+  right: -365px;
 }
