@@ -654,6 +654,7 @@ margin-bottom: 24px;
   background-color: var(--brand-color);
   border-radius: 50%;
   border: none;
+  cursor: pointer;
 }
 
 .button-add:hover{
