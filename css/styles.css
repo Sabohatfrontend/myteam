@@ -594,7 +594,7 @@ img{
   align-items: center;
 }
 
-..directors-item-meet{
+.directors-item-meet{
   padding-bottom: 7px;
   padding-top: 3px;
 }
@@ -688,7 +688,7 @@ margin-bottom: 24px;
 }
 
 .button-add-active span::before{
-  transform: translate(19px, 2px) rotate(45deg);
+  transform: translate(20px, 2px) rotate(45deg);
 }
 
 .button-add-active{
