@@ -130,6 +130,7 @@ img{
 }
 
 .site-logo-link {
+  flex-shrink: 0;
   display: block;
   margin-right: 80px;
   color: var(--white-color);
@@ -497,6 +498,7 @@ img{
 .site-footer-list {
   padding: 0;
   margin-top: 0;
+  margin-bottom: 51px;
   list-style: none;
   display: flex;
   align-items: center;
@@ -528,7 +530,6 @@ img{
 
 .site-footer-social-bottom {
   margin-right: 0;
-  margin-top: 51px;
 }
 
 .directors {
@@ -592,6 +593,11 @@ img{
   align-items: center;
 }
 
+..directors-item-meet{
+  padding-bottom: 7px;
+  padding-top: 3px;
+}
+
 .directors-item-meet-text {
 line-height: 25px;
 text-align: center;
@@ -602,6 +608,39 @@ margin-bottom: 24px;
 .directors-item-meet-social{
   display: flex;
   align-items: center;
+}
+
+.directors-social-list {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.directors-social-item:not(:last-child){
+  margin-right: 16px;
+}
+
+.directors-social-link {
+  display: block;
+  color: var(--white-color);
+}
+
+.directors-social-item:hover .directors-social-link{
+  color: var(--brand-color);
+}
+
+.directors-social-item:active .directors-social-link{
+  opacity: 0.6;
+}
+
+.directors-social-img {
+  display: block;
+  width: 24px;
+  height: 20px;
+  object-fit: cover;
 }
 
 .button-add{
